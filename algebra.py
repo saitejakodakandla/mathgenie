@@ -9,15 +9,51 @@ def add():
     return
 
 def sub():
+    k=int(input("Enter the greatest number"))
+    s=int(input("Enter another number"))
+    total=k-s
+    print("Total",total)
     return   
 
 def multiply():
+    total=0
+    count=int(input("How many numbers do You want to multiply"))
+    for i in range(count):
+        v=int(input("enter the number"))
+        total=total*v
+    print("Total",total)
     return
+def divide():
+    k=int(input("Enter the dividend"))
+    a=int(input("Enter divisor"))
+    quotient=k/a
+    print("Quotient",quotient)
+    return
+def remainder():
+    k=int(input("Enter the dividend"))
+    a=int(input("Enter divisor"))
+    remainder=k%a
+    print("Remainder",remainder)
+    return
+def complexnumbers():
+    print("Complex Number Arithmetic Enter Numbers in a+ij format")
+    a=complex(input("Enter the first complex number"))
+    b=complex(input("Enter the second complex number"))
+    print(a+b,"is the Sum")
+    print(a-b,"is the Difference")
+    print(a*b,"is the product")
+    return
+
+
 
 switcher={
     1:add,
     2:sub,
-    3:multiply
+    3:multiply,
+    4:divide,
+    5:remainder,
+    6:complexnumbers,
+
 }
 
 def main():
@@ -33,7 +69,7 @@ def main():
     ch=int(input("Enter the Number of the Operation"))
     if ch==0:
         return
-    elif(ch<6 and ch>=0):
+    elif(ch<7 and ch>=0):
         func=switcher.get(ch)
         func()
     else:
