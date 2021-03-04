@@ -12,6 +12,7 @@ def sub():
     k=int(input("Enter the greatest number"))
     s=int(input("Enter another number"))
     total=k-s
+    print(k-s)
     print("Total",total)
     return   
 

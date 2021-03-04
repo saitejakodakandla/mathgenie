@@ -12,11 +12,11 @@ def circle():
     print("Circumference of a circle",C)
     print("Diameter of a circle",d)
     return
+
+
+
 def triangle():
     import math
-
-   
-   
     side1=float(input("enter the side1 of a triangle"))
     side2=float(input("enter the side2 of a triangle"))
     side3=float(input("enter the side3 of a triangle"))               
